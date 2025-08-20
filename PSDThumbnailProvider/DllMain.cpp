@@ -62,9 +62,9 @@ PSDTP_API HRESULT STDAPICALLTYPE DllRegisterServer()
     setRegistryKeyValue(HKEY_CLASSES_ROOT, "CLSID\\" PSD_SHELL_CLSID "\\InprocServer32", szModule, L"");
     setRegistryKeyValue(HKEY_CLASSES_ROOT, "CLSID\\" PSD_SHELL_CLSID "\\InprocServer32", L"Apartment", L"ThreadingModel");
 
-    setRegistryKeyValue(HKEY_CURRENT_USER, L"Software\\Classes\\.psd\\ShellEx\\{e357fccd-a995-4576-b01f-234630154e96}", PSD_SHELL_CLSID, L"");
+    /*setRegistryKeyValue(HKEY_CURRENT_USER, L"Software\\Classes\\.psd\\ShellEx\\{e357fccd-a995-4576-b01f-234630154e96}", PSD_SHELL_CLSID, L"");
     setRegistryKeyValue(HKEY_CURRENT_USER, "Software\\Classes\\CLSID\\" PSD_SHELL_CLSID "\\InprocServer32", szModule, L"");
-    setRegistryKeyValue(HKEY_CURRENT_USER, "Software\\Classes\\CLSID\\" PSD_SHELL_CLSID "\\InprocServer32", L"Apartment", L"ThreadingModel");
+    setRegistryKeyValue(HKEY_CURRENT_USER, "Software\\Classes\\CLSID\\" PSD_SHELL_CLSID "\\InprocServer32", L"Apartment", L"ThreadingModel");*/
 
     SHChangeNotify(SHCNE_ASSOCCHANGED, SHCNF_IDLIST, NULL, NULL);
     return S_OK;

@@ -15,22 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\ComEntry.h">
+    <ClInclude Include="PSDThumbnailProvider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\Common.h">
+    <ClInclude Include="PSDReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\framework.h">
+    <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\pch.h">
+    <ClInclude Include="Common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\PSDReader.h">
+    <ClInclude Include="ComEntry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\PSDThumbnailProvider.h">
+    <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,28 +38,25 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\ClassFactory.cpp">
+    <ClCompile Include="ClassFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\DllMain.cpp">
+    <ClCompile Include="DllMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\pch.cpp">
+    <ClCompile Include="PSDReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\PSDReader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\PSDThumbnailProvider.cpp">
+    <ClCompile Include="PSDThumbnailProvider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\DllMain.def">
+    <CopyFileToFolders Include="Install.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DllMain.def">
       <Filter>Source Files</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <CopyFileToFolders Include="..\..\PSDThumbnailProvider1\PSDThumbnailProvidertomanocu\Install.ps1" />
   </ItemGroup>
 </Project>

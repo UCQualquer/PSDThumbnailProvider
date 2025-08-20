@@ -22,7 +22,7 @@ PSDThumbnailProvider::PSDThumbnailProvider() {
         char dllPath[MAX_PATH];
         GetModuleFileNameA(g_hModule, dllPath, MAX_PATH);
         // MessageBoxA(NULL, dllPath, "Debug", MB_OK);
-        Magick::InitializeMagick(dllPath);
+        Magick::InitializeMagick("");
         g_magickInitialized = true;
     }
 }
