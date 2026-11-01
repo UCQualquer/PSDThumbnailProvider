@@ -68,26 +68,6 @@ IFACEMETHODIMP PSDThumbnailProvider::Initialize(IStream* pstream, DWORD grfMode)
 IFACEMETHODIMP PSDThumbnailProvider::GetThumbnail(UINT cx, HBITMAP* phbmp, WTS_ALPHATYPE* pdwAlpha)
 {
     PSDReader psdReader;
-    HRESULT hr = psdReader.CreateThumbnailBitmap(
-        this->m_stream, cx, cx, phbmp, pdwAlpha);
+    HRESULT hr = psdReader.CreateBitmap(this->m_stream, cx, cx, phbmp, pdwAlpha);
     return hr;
-
-    /*MessageBoxW(NULL, to_wstring(cx).data(), L"Debug", MB_OK);
-
-    HDC hdc = CreateCompatibleDC(nullptr);
-    HBITMAP hBmp = CreateCompatibleBitmap(GetDC(nullptr), cx, cx);
-    SelectObject(hdc, hBmp);
-    HBRUSH hBrush = CreateSolidBrush(RGB(123, 123, 255));
-    RECT rect = { 0, 0, (LONG)cx, (LONG)cx };
-
-    FillRect(hdc, &rect, hBrush);
-    SetTextColor(hdc, RGB(0, 0, 0));
-    SetBkMode(hdc, TRANSPARENT);
-    TextOutW(hdc, 5, 5, L"HELLO", 5);
-    DeleteObject(hBrush);
-    DeleteDC(hdc);
-
-    *phbmp = hBmp;
-    *pdwAlpha = WTSAT_RGB;
-    return S_OK;*/
 }

@@ -9,5 +9,5 @@ public:
     PSDReader();
     ~PSDReader();
 
-    HRESULT CreateThumbnailBitmap(IStream* pstream, UINT maxWidth, UINT maxHeigth, HBITMAP* phbmp, WTS_ALPHATYPE* pdwAlpha);
+    HRESULT CreateBitmap(IStream* pstream, UINT maxWidth, UINT maxHeight, HBITMAP* phbmp, WTS_ALPHATYPE* pdwAlpha);
 };
